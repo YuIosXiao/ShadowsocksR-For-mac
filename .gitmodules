@@ -1,0 +1,3 @@
+[submodule "shadowpath"]
+	path = shadowpath
+	url = https://github.com/icodesign/shadowsocks-libev.git
