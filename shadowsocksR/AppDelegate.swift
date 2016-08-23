@@ -22,6 +22,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
+    @IBAction func buttonTap(sender: AnyObject) {
+        print("1111")
+        let handler = ProxyManager.sharedManager()
+        handler.startShadowsocks { (g, error) in
+            print("2222")
+
+        }
+    }
+
+    func start_SS_local(){
+        
+    }
 
 }
 

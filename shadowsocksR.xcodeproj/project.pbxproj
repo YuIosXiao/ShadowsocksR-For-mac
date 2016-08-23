@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0946F9A21D6C1FA3000072C8 /* ProxyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0946F9A11D6C1FA3000072C8 /* ProxyManager.m */; };
 		09F68A921D6C031E0009E631 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F68A911D6C031E0009E631 /* AppDelegate.swift */; };
 		09F68A941D6C031E0009E631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F68A931D6C031E0009E631 /* Assets.xcassets */; };
 		09F68A971D6C031E0009E631 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F68A951D6C031E0009E631 /* MainMenu.xib */; };
@@ -262,6 +263,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0946F9A01D6C1FA3000072C8 /* ProxyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProxyManager.h; path = serviceHandler/ProxyManager.h; sourceTree = "<group>"; };
+		0946F9A11D6C1FA3000072C8 /* ProxyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProxyManager.m; path = serviceHandler/ProxyManager.m; sourceTree = "<group>"; };
+		0946F9A31D6C22A2000072C8 /* shadowsocksR-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "shadowsocksR-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		09F68A8E1D6C031E0009E631 /* shadowsocksR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shadowsocksR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F68A911D6C031E0009E631 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F68A931D6C031E0009E631 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -711,6 +715,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0946F99F1D6C1F61000072C8 /* serviceHandler */ = {
+			isa = PBXGroup;
+			children = (
+				0946F9A01D6C1FA3000072C8 /* ProxyManager.h */,
+				0946F9A11D6C1FA3000072C8 /* ProxyManager.m */,
+			);
+			name = serviceHandler;
+			sourceTree = "<group>";
+		};
 		09F68A851D6C031E0009E631 = {
 			isa = PBXGroup;
 			children = (
@@ -732,6 +745,8 @@
 		09F68A901D6C031E0009E631 /* shadowsocksR */ = {
 			isa = PBXGroup;
 			children = (
+				0946F9A31D6C22A2000072C8 /* shadowsocksR-Bridging-Header.h */,
+				0946F99F1D6C1F61000072C8 /* serviceHandler */,
 				09F68A911D6C031E0009E631 /* AppDelegate.swift */,
 				09F68A931D6C031E0009E631 /* Assets.xcassets */,
 				09F68A951D6C031E0009E631 /* MainMenu.xib */,
@@ -2293,6 +2308,7 @@
 				09F68C361D6C17770009E631 /* reachable.c in Sources */,
 				09F68E2F1D6C18610009E631 /* poly1305_donna.c in Sources */,
 				09F68E9A1D6C18610009E631 /* stream_xsalsa20.c in Sources */,
+				0946F9A21D6C1FA3000072C8 /* ProxyManager.m in Sources */,
 				09F68E311D6C18610009E631 /* poly1305_sse2.c in Sources */,
 				09F68E331D6C18610009E631 /* pwhash_scryptsalsa208sha256_nosse.c in Sources */,
 				09F68E7A1D6C18610009E631 /* ge_scalarmult_base.c in Sources */,
