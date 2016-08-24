@@ -16,12 +16,17 @@ class ServiceHandler:NSObject{
 
     func start_ss(){
         NSThread.detachNewThreadSelector(#selector(ServiceHandler.ss_run_on_therad), toTarget: self, withObject: nil)
-
     }
 
     func stop_ss(){
         ss_exit_lock.signal()
-        print("signal")
+    }
+
+    func sync_ss(){
+        stop_ss()
+        if inf.shared.isOn{
+            start_ss()
+        }
     }
 
     func ss_run_on_therad(){

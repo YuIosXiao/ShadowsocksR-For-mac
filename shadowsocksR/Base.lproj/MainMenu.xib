@@ -66,9 +66,6 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="eG7-hy-XCb"/>
-                            <menuItem title="Advance Proxy Preference..." id="i6E-Qg-EB3">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>

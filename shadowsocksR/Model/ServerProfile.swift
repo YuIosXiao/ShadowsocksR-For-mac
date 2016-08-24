@@ -75,28 +75,9 @@ class ServerProfile: NSObject {
         d["obfs"] = obfs
         d["protocol"] = protocols
         d["obfspara"] = obfspara
-//        d["OTA"] = ota
         return d
     }
     
-    func toJsonConfig() -> [String: AnyObject] {
-        var conf: [String: AnyObject] = ["server": serverHost,
-                                         "server_port": NSNumber(unsignedShort: serverPort),
-                                         "password": password,
-                                         "method": method,
-                                         "protocol":protocols,
-                                         "obfs":obfs,
-                                         "obfs_param":obfspara
-                                         ]
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        conf["local_port"] = NSNumber(unsignedShort: UInt16(defaults.integerForKey("LocalSocks5.ListenPort")))
-        conf["local_address"] = defaults.stringForKey("LocalSocks5.ListenAddress")
-        conf["timeout"] = NSNumber(unsignedInt: UInt32(defaults.integerForKey("LocalSocks5.Timeout")))
-//        conf["auth"] = NSNumber(bool: ota)
-
-        return conf
-    }
     
     func isValid() -> Bool {
         func validateIpAddress(ipToValidate: String) -> Bool {

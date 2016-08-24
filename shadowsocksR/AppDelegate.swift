@@ -29,32 +29,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var lanchAtLoginMenuItem: NSMenuItem!
 
     var preferencesWinCtrl: PreferencesWindowController!
+    var launchAtLoginController: LaunchAtLoginController = LaunchAtLoginController()
 
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        // 初始化菜单
         statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(20)
         let image = NSImage(named: "menu_icon")
         image?.template = true
         statusItem.image = image
         statusItem.menu = mainMenu
+        //检测proxy_conf_helper
+        ProxyConfHelper.install()
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+        inf.shared.save()
     }
 
 
     @IBAction func toggleRunning(sender: NSMenuItem) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        var isOn = defaults.boolForKey("ShadowsocksOn")
-        isOn = !isOn
-        defaults.setBool(isOn, forKey: "ShadowsocksOn")
-        if isOn{
-            ServiceHandler.instance.start_ss()
-        }else{
-            ServiceHandler.instance.stop_ss()
-        }
+        inf.shared.isOn = !inf.shared.isOn
+        ServiceHandler.instance.sync_ss()
         updateMainMenu()
     }
 
@@ -66,6 +63,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if newProfile.uuid != spMgr.activeProfileId {
             spMgr.setActiveProfiledId(newProfile.uuid)
             updateServersMenu()
+            ServiceHandler.instance.sync_ss()
         }
     }
 
@@ -82,7 +80,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
 
-/*
+
     func updateLaunchAtLoginMenu() {
         if launchAtLoginController.launchAtLogin {
             lanchAtLoginMenuItem.state = 1
@@ -90,41 +88,33 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             lanchAtLoginMenuItem.state = 0
         }
     }
-*/
-    func updateRunningModeMenu() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let mode = defaults.stringForKey("ShadowsocksRunningMode")
-        if mode == "auto" {
-            proxyMenuItem.title = "Proxy - Auto By PAC".localized
-            autoModeMenuItem.state = 1
-            globalModeMenuItem.state = 0
-            manualModeMenuItem.state = 0
-            bypasschinaModeMenuItem.state = 0
-        } else if mode == "global" {
-            proxyMenuItem.title = "Proxy - Global".localized
-            autoModeMenuItem.state = 0
-            globalModeMenuItem.state = 1
-            manualModeMenuItem.state = 0
-            bypasschinaModeMenuItem.state = 0
-        } else if mode == "manual" {
-            proxyMenuItem.title = "Proxy - Manual".localized
-            autoModeMenuItem.state = 0
-            globalModeMenuItem.state = 0
-            manualModeMenuItem.state = 1
-            bypasschinaModeMenuItem.state = 0
-        } else if mode == "bypasschina"{
-            proxyMenuItem.title = "Proxy - ByPassChina".localized
-            autoModeMenuItem.state = 0
-            globalModeMenuItem.state = 0
-            manualModeMenuItem.state = 0
-            bypasschinaModeMenuItem.state = 1
 
+    func updateRunningModeMenu() {
+        let mode = inf.shared.ProxyMode
+
+        autoModeMenuItem.state = 0
+        globalModeMenuItem.state = 0
+        manualModeMenuItem.state = 0
+        bypasschinaModeMenuItem.state = 0
+
+        switch mode {
+        case .Gfwlist:
+            proxyMenuItem.title = "Proxy - GFW List".localized
+            autoModeMenuItem.state = 1
+        case .Global:
+            proxyMenuItem.title = "Proxy - Global".localized
+            globalModeMenuItem.state = 1
+        case .Bypasschina:
+            proxyMenuItem.title = "Proxy - ByPassChina".localized
+            bypasschinaModeMenuItem.state = 1
+        case .Manual:
+            proxyMenuItem.title = "Proxy - Manual".localized
+            manualModeMenuItem.state = 1
         }
     }
 
     func updateMainMenu() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let isOn = defaults.boolForKey("ShadowsocksOn")
+        let isOn = inf.shared.isOn
         if isOn {
             runningStatusMenuItem.title = "ShadowsocksR: On".localized
             toggleRunningMenuItem.title = "Turn Shadowsocks Off".localized
@@ -173,19 +163,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         serversMenuItem.submenu?.addItem(NSMenuItem.separatorItem())
         serversMenuItem.submenu?.addItem(preferencesItem)
     }
-
-
-/*
-    @IBAction func buttonTap(sender: AnyObject) {
-        print("1111")
-        let handler = ProxyManager.sharedManager()
-        handler.startShadowsocks { (port, error) in
-            print(port)
-        }
-    }
- */
-
-
 
 }
 
