@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0946F9A21D6C1FA3000072C8 /* ProxyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0946F9A11D6C1FA3000072C8 /* ProxyManager.m */; };
+		0946F9B81D6CA4CB000072C8 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946F9B71D6CA4CB000072C8 /* Notifications.swift */; };
+		0946F9BA1D6CA544000072C8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946F9B91D6CA544000072C8 /* Utils.swift */; };
+		0946F9BD1D6CAA35000072C8 /* ServerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946F9BB1D6CAA35000072C8 /* ServerProfile.swift */; };
+		0946F9BE1D6CAA35000072C8 /* ServerProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946F9BC1D6CAA35000072C8 /* ServerProfileManager.swift */; };
+		0946F9C11D6CAEF1000072C8 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946F9BF1D6CAEF1000072C8 /* PreferencesWindowController.swift */; };
+		0946F9C21D6CAEF1000072C8 /* PreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0946F9C01D6CAEF1000072C8 /* PreferencesWindowController.xib */; };
+		0946F9C91D6CAF97000072C8 /* menu_icon_disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 0946F9C51D6CAF97000072C8 /* menu_icon_disabled.png */; };
+		0946F9CA1D6CAF97000072C8 /* menu_icon_disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0946F9C61D6CAF97000072C8 /* menu_icon_disabled@2x.png */; };
+		0946F9CB1D6CAF97000072C8 /* menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0946F9C71D6CAF97000072C8 /* menu_icon.png */; };
+		0946F9CC1D6CAF97000072C8 /* menu_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0946F9C81D6CAF97000072C8 /* menu_icon@2x.png */; };
+		0946F9D31D6DA574000072C8 /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946F9D21D6DA574000072C8 /* ServiceHandler.swift */; };
 		09F68A921D6C031E0009E631 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F68A911D6C031E0009E631 /* AppDelegate.swift */; };
 		09F68A941D6C031E0009E631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F68A931D6C031E0009E631 /* Assets.xcassets */; };
 		09F68A971D6C031E0009E631 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F68A951D6C031E0009E631 /* MainMenu.xib */; };
@@ -266,6 +277,17 @@
 		0946F9A01D6C1FA3000072C8 /* ProxyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProxyManager.h; path = serviceHandler/ProxyManager.h; sourceTree = "<group>"; };
 		0946F9A11D6C1FA3000072C8 /* ProxyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProxyManager.m; path = serviceHandler/ProxyManager.m; sourceTree = "<group>"; };
 		0946F9A31D6C22A2000072C8 /* shadowsocksR-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "shadowsocksR-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		0946F9B71D6CA4CB000072C8 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		0946F9B91D6CA544000072C8 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0946F9BB1D6CAA35000072C8 /* ServerProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerProfile.swift; sourceTree = "<group>"; };
+		0946F9BC1D6CAA35000072C8 /* ServerProfileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerProfileManager.swift; sourceTree = "<group>"; };
+		0946F9BF1D6CAEF1000072C8 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		0946F9C01D6CAEF1000072C8 /* PreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindowController.xib; sourceTree = "<group>"; };
+		0946F9C51D6CAF97000072C8 /* menu_icon_disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon_disabled.png; sourceTree = "<group>"; };
+		0946F9C61D6CAF97000072C8 /* menu_icon_disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_icon_disabled@2x.png"; sourceTree = "<group>"; };
+		0946F9C71D6CAF97000072C8 /* menu_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon.png; sourceTree = "<group>"; };
+		0946F9C81D6CAF97000072C8 /* menu_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_icon@2x.png"; sourceTree = "<group>"; };
+		0946F9D21D6DA574000072C8 /* ServiceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceHandler.swift; path = serviceHandler/ServiceHandler.swift; sourceTree = "<group>"; };
 		09F68A8E1D6C031E0009E631 /* shadowsocksR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shadowsocksR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F68A911D6C031E0009E631 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F68A931D6C031E0009E631 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -720,8 +742,49 @@
 			children = (
 				0946F9A01D6C1FA3000072C8 /* ProxyManager.h */,
 				0946F9A11D6C1FA3000072C8 /* ProxyManager.m */,
+				0946F9D21D6DA574000072C8 /* ServiceHandler.swift */,
 			);
 			name = serviceHandler;
+			sourceTree = "<group>";
+		};
+		0946F9A51D6CA418000072C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0946F9BB1D6CAA35000072C8 /* ServerProfile.swift */,
+				0946F9BC1D6CAA35000072C8 /* ServerProfileManager.swift */,
+				0946F9B71D6CA4CB000072C8 /* Notifications.swift */,
+				0946F9B91D6CA544000072C8 /* Utils.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0946F9A81D6CA418000072C8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0946F9BF1D6CAEF1000072C8 /* PreferencesWindowController.swift */,
+				0946F9C01D6CAEF1000072C8 /* PreferencesWindowController.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0946F9C31D6CAF49000072C8 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0946F9C41D6CAF97000072C8 /* icon */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		0946F9C41D6CAF97000072C8 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				0946F9C51D6CAF97000072C8 /* menu_icon_disabled.png */,
+				0946F9C61D6CAF97000072C8 /* menu_icon_disabled@2x.png */,
+				0946F9C71D6CAF97000072C8 /* menu_icon.png */,
+				0946F9C81D6CAF97000072C8 /* menu_icon@2x.png */,
+			);
+			name = icon;
+			path = Resource/icon;
 			sourceTree = "<group>";
 		};
 		09F68A851D6C031E0009E631 = {
@@ -745,6 +808,9 @@
 		09F68A901D6C031E0009E631 /* shadowsocksR */ = {
 			isa = PBXGroup;
 			children = (
+				0946F9C31D6CAF49000072C8 /* Resource */,
+				0946F9A51D6CA418000072C8 /* Model */,
+				0946F9A81D6CA418000072C8 /* UI */,
 				0946F9A31D6C22A2000072C8 /* shadowsocksR-Bridging-Header.h */,
 				0946F99F1D6C1F61000072C8 /* serviceHandler */,
 				09F68A911D6C031E0009E631 /* AppDelegate.swift */,
@@ -2125,6 +2191,11 @@
 			files = (
 				09F68A941D6C031E0009E631 /* Assets.xcassets in Resources */,
 				09F68A971D6C031E0009E631 /* MainMenu.xib in Resources */,
+				0946F9CC1D6CAF97000072C8 /* menu_icon@2x.png in Resources */,
+				0946F9CA1D6CAF97000072C8 /* menu_icon_disabled@2x.png in Resources */,
+				0946F9C91D6CAF97000072C8 /* menu_icon_disabled.png in Resources */,
+				0946F9CB1D6CAF97000072C8 /* menu_icon.png in Resources */,
+				0946F9C21D6CAEF1000072C8 /* PreferencesWindowController.xib in Resources */,
 				09F68E5A1D6C18610009E631 /* description in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2158,6 +2229,7 @@
 				09F68E4A1D6C18610009E631 /* fe51_mul.S in Sources */,
 				09F68E661D6C18610009E631 /* fe_pow22523.c in Sources */,
 				09F68B841D6C10C80009E631 /* directory-walker.c in Sources */,
+				0946F9D31D6DA574000072C8 /* ServiceHandler.swift in Sources */,
 				09F68E821D6C18610009E631 /* sign.c in Sources */,
 				09F68E651D6C18610009E631 /* fe_neg.c in Sources */,
 				09F68E411D6C18610009E631 /* fe_invert_curve25519_ref10.c in Sources */,
@@ -2194,6 +2266,7 @@
 				09F68E5F1D6C18610009E631 /* fe_copy.c in Sources */,
 				09F68EA21D6C18610009E631 /* verify_64_api.c in Sources */,
 				09F68E241D6C18610009E631 /* blake2b-compress-sse41.c in Sources */,
+				0946F9BE1D6CAA35000072C8 /* ServerProfileManager.swift in Sources */,
 				09F68E6C1D6C18610009E631 /* ge_double_scalarmult.c in Sources */,
 				09F68E081D6C18610009E631 /* crypto_auth.c in Sources */,
 				09F68E991D6C18610009E631 /* stream_salsa208_api.c in Sources */,
@@ -2262,6 +2335,7 @@
 				09F68B711D6C10C80009E631 /* allocator.c in Sources */,
 				09F68B7B1D6C10C80009E631 /* buffer.c in Sources */,
 				09F68B0B1D6C108A0009E631 /* netutils.c in Sources */,
+				0946F9C11D6CAEF1000072C8 /* PreferencesWindowController.swift in Sources */,
 				09F68B8A1D6C10C80009E631 /* thread.c in Sources */,
 				09F68B041D6C108A0009E631 /* cache.c in Sources */,
 				09F68C301D6C17770009E631 /* assignments.c in Sources */,
@@ -2299,6 +2373,7 @@
 				09F68E191D6C18610009E631 /* keypair_curve25519xsalsa20poly1305.c in Sources */,
 				09F68BF01D6C13B10009E631 /* udns_dntosp.c in Sources */,
 				09F68E621D6C18610009E631 /* fe_isnegative.c in Sources */,
+				0946F9BA1D6CA544000072C8 /* Utils.swift in Sources */,
 				09F68E351D6C18610009E631 /* pwhash_scryptsalsa208sha256.c in Sources */,
 				09F68E161D6C18610009E631 /* after_curve25519xsalsa20poly1305.c in Sources */,
 				09F68E1F1D6C18610009E631 /* core_salsa2012.c in Sources */,
@@ -2324,6 +2399,7 @@
 				09F68B761D6C10C80009E631 /* mempool.c in Sources */,
 				09F68E251D6C18610009E631 /* blake2b-compress-ssse3.c in Sources */,
 				09F68E481D6C18610009E631 /* curve25519_sandy2x.c in Sources */,
+				0946F9B81D6CA4CB000072C8 /* Notifications.swift in Sources */,
 				09F68E0A1D6C18610009E631 /* hmac_hmacsha256.c in Sources */,
 				09F68C3D1D6C17770009E631 /* allocation.c in Sources */,
 				09F68E3F1D6C18610009E631 /* fe_cswap_curve25519_ref10.c in Sources */,
@@ -2356,6 +2432,7 @@
 				09F68AE01D6C10070009E631 /* auth.c in Sources */,
 				09F68EA11D6C18610009E631 /* verify_64.c in Sources */,
 				09F68E5D1D6C18610009E631 /* fe_add.c in Sources */,
+				0946F9BD1D6CAA35000072C8 /* ServerProfile.swift in Sources */,
 				09F68E771D6C18610009E631 /* ge_p3_to_p2.c in Sources */,
 				09F68B061D6C108A0009E631 /* encrypt.c in Sources */,
 				09F68BB71D6C12660009E631 /* event.c in Sources */,

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "716F9A78BABCDEF7DB0000E69215C29E6FB1FC50",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "88EA2772244A30DC9C9F9C8CF4484193B457DACA" : 0,
+    "716F9A78BABCDEF7DB0000E69215C29E6FB1FC50" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0751309F-C84D-44A1-B61B-291A122C2A9C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "88EA2772244A30DC9C9F9C8CF4484193B457DACA" : "shadowsocksR\/shadowpath\/",
+    "716F9A78BABCDEF7DB0000E69215C29E6FB1FC50" : "shadowsocksR\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "shadowsocksR",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "shadowsocksR.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yichengchen\/ShadowsocksR-For-mac.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "716F9A78BABCDEF7DB0000E69215C29E6FB1FC50"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yichengchen\/shadowsocks-libev.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "88EA2772244A30DC9C9F9C8CF4484193B457DACA"
+    }
+  ]
+}
