@@ -19,6 +19,9 @@
 		0946F9CB1D6CAF97000072C8 /* menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0946F9C71D6CAF97000072C8 /* menu_icon.png */; };
 		0946F9CC1D6CAF97000072C8 /* menu_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0946F9C81D6CAF97000072C8 /* menu_icon@2x.png */; };
 		0946F9D31D6DA574000072C8 /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946F9D21D6DA574000072C8 /* ServiceHandler.swift */; };
+		098F3D621D6EA06F0039050F /* abp.js in Resources */ = {isa = PBXBuildFile; fileRef = 098F3D601D6EA06F0039050F /* abp.js */; };
+		098F3D631D6EA06F0039050F /* gfwlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 098F3D611D6EA06F0039050F /* gfwlist.txt */; };
+		098F3D651D6EA0900039050F /* PacTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098F3D641D6EA0900039050F /* PacTools.swift */; };
 		09B596441D6DDD6E000D2A83 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B596431D6DDD6E000D2A83 /* Information.swift */; };
 		09B596E61D6DE78A000D2A83 /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B596E51D6DE78A000D2A83 /* LaunchAtLoginController.m */; };
 		09B596EE1D6DF09B000D2A83 /* ProxyConfHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B596ED1D6DF09B000D2A83 /* ProxyConfHelper.m */; };
@@ -277,6 +280,7 @@
 		09F68EAE1D6C18610009E631 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 09F68DDD1D6C18610009E631 /* utils.c */; };
 		09F68EAF1D6C18610009E631 /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = 09F68DDE1D6C18610009E631 /* version.c */; };
 		1565A73A86E3EB99652BB7AE /* libPods-proxy_conf_helper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC5D536C0E3B6C118AAFE0D /* libPods-proxy_conf_helper.a */; };
+		F043AC0704209A6B0169D93E /* Pods_shadowsocksR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A61B267650E590E9307D87 /* Pods_shadowsocksR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -306,6 +310,9 @@
 		0946F9C71D6CAF97000072C8 /* menu_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon.png; sourceTree = "<group>"; };
 		0946F9C81D6CAF97000072C8 /* menu_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_icon@2x.png"; sourceTree = "<group>"; };
 		0946F9D21D6DA574000072C8 /* ServiceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceHandler.swift; path = serviceHandler/ServiceHandler.swift; sourceTree = "<group>"; };
+		098F3D601D6EA06F0039050F /* abp.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = abp.js; sourceTree = "<group>"; };
+		098F3D611D6EA06F0039050F /* gfwlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gfwlist.txt; sourceTree = "<group>"; };
+		098F3D641D6EA0900039050F /* PacTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacTools.swift; sourceTree = "<group>"; };
 		09B596431D6DDD6E000D2A83 /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		09B596E41D6DE78A000D2A83 /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LaunchAtLoginController.h; path = shadowsocksR/Other/LaunchAtLoginController.h; sourceTree = "<group>"; };
 		09B596E51D6DE78A000D2A83 /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LaunchAtLoginController.m; path = shadowsocksR/Other/LaunchAtLoginController.m; sourceTree = "<group>"; };
@@ -750,6 +757,9 @@
 		1777DF715B0948FF9C3E1BF1 /* Pods-proxy_conf_helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proxy_conf_helper.release.xcconfig"; path = "Pods/Target Support Files/Pods-proxy_conf_helper/Pods-proxy_conf_helper.release.xcconfig"; sourceTree = "<group>"; };
 		4CC5D536C0E3B6C118AAFE0D /* libPods-proxy_conf_helper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-proxy_conf_helper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7F913D28D3FA25D1AC4B7D /* Pods-proxy_conf_helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proxy_conf_helper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-proxy_conf_helper/Pods-proxy_conf_helper.debug.xcconfig"; sourceTree = "<group>"; };
+		66A61B267650E590E9307D87 /* Pods_shadowsocksR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shadowsocksR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8630A7FEAED6D9CC82970732 /* Pods-shadowsocksR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shadowsocksR.release.xcconfig"; path = "Pods/Target Support Files/Pods-shadowsocksR/Pods-shadowsocksR.release.xcconfig"; sourceTree = "<group>"; };
+		9DDB879414AEEA210B5C47B0 /* Pods-shadowsocksR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shadowsocksR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shadowsocksR/Pods-shadowsocksR.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -769,6 +779,7 @@
 				09F68C041D6C151C0009E631 /* libssl.a in Frameworks */,
 				09F68C001D6C14380009E631 /* SecurityFoundation.framework in Frameworks */,
 				09F68BFE1D6C142A0009E631 /* Security.framework in Frameworks */,
+				F043AC0704209A6B0169D93E /* Pods_shadowsocksR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,6 +792,7 @@
 				0946F9A01D6C1FA3000072C8 /* ProxyManager.h */,
 				0946F9A11D6C1FA3000072C8 /* ProxyManager.m */,
 				0946F9D21D6DA574000072C8 /* ServiceHandler.swift */,
+				098F3D641D6EA0900039050F /* PacTools.swift */,
 			);
 			name = serviceHandler;
 			sourceTree = "<group>";
@@ -810,6 +822,7 @@
 		0946F9C31D6CAF49000072C8 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				098F3D5F1D6EA06F0039050F /* pac */,
 				09B596EF1D6DF123000D2A83 /* install_helper.sh */,
 				09F68A931D6C031E0009E631 /* Assets.xcassets */,
 				0946F9C41D6CAF97000072C8 /* icon */,
@@ -827,6 +840,16 @@
 			);
 			name = icon;
 			path = Resource/icon;
+			sourceTree = "<group>";
+		};
+		098F3D5F1D6EA06F0039050F /* pac */ = {
+			isa = PBXGroup;
+			children = (
+				098F3D601D6EA06F0039050F /* abp.js */,
+				098F3D611D6EA06F0039050F /* gfwlist.txt */,
+			);
+			name = pac;
+			path = Resource/pac;
 			sourceTree = "<group>";
 		};
 		09B596E31D6DE6CC000D2A83 /* Supporting Files */ = {
@@ -2192,6 +2215,7 @@
 				09F68BFF1D6C14380009E631 /* SecurityFoundation.framework */,
 				09F68BFD1D6C142A0009E631 /* Security.framework */,
 				4CC5D536C0E3B6C118AAFE0D /* libPods-proxy_conf_helper.a */,
+				66A61B267650E590E9307D87 /* Pods_shadowsocksR.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2201,6 +2225,8 @@
 			children = (
 				5B7F913D28D3FA25D1AC4B7D /* Pods-proxy_conf_helper.debug.xcconfig */,
 				1777DF715B0948FF9C3E1BF1 /* Pods-proxy_conf_helper.release.xcconfig */,
+				9DDB879414AEEA210B5C47B0 /* Pods-shadowsocksR.debug.xcconfig */,
+				8630A7FEAED6D9CC82970732 /* Pods-shadowsocksR.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -2231,9 +2257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09F68A9B1D6C031E0009E631 /* Build configuration list for PBXNativeTarget "shadowsocksR" */;
 			buildPhases = (
+				D88DB4C241D03ECD2B1A06B4 /* Check Pods Manifest.lock */,
 				09F68A8A1D6C031E0009E631 /* Sources */,
 				09F68A8B1D6C031E0009E631 /* Frameworks */,
 				09F68A8C1D6C031E0009E631 /* Resources */,
+				C77D827A69CC848C36003B43 /* Embed Pods Frameworks */,
+				DEDC988DF095A8AE2F1D3CBE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2286,6 +2315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098F3D621D6EA06F0039050F /* abp.js in Resources */,
 				09B596FD1D6DFAC2000D2A83 /* proxy_conf_helper in Resources */,
 				09F68A941D6C031E0009E631 /* Assets.xcassets in Resources */,
 				09F68A971D6C031E0009E631 /* MainMenu.xib in Resources */,
@@ -2293,6 +2323,7 @@
 				0946F9CA1D6CAF97000072C8 /* menu_icon_disabled@2x.png in Resources */,
 				0946F9C91D6CAF97000072C8 /* menu_icon_disabled.png in Resources */,
 				0946F9CB1D6CAF97000072C8 /* menu_icon.png in Resources */,
+				098F3D631D6EA06F0039050F /* gfwlist.txt in Resources */,
 				0946F9C21D6CAEF1000072C8 /* PreferencesWindowController.xib in Resources */,
 				09B596F01D6DF123000D2A83 /* install_helper.sh in Resources */,
 			);
@@ -2329,6 +2360,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-proxy_conf_helper/Pods-proxy_conf_helper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C77D827A69CC848C36003B43 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shadowsocksR/Pods-shadowsocksR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D88DB4C241D03ECD2B1A06B4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DEDC988DF095A8AE2F1D3CBE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shadowsocksR/Pods-shadowsocksR-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2488,6 +2564,7 @@
 				09F68E701D6C18610009E631 /* ge_p1p1_to_p2.c in Sources */,
 				09F68E121D6C18610009E631 /* crypto_box.c in Sources */,
 				09F68B861D6C10C80009E631 /* exec.c in Sources */,
+				098F3D651D6EA0900039050F /* PacTools.swift in Sources */,
 				09F68E101D6C18610009E631 /* hmac_hmacsha512256.c in Sources */,
 				09F68B891D6C10C80009E631 /* subprocess.c in Sources */,
 				09F68B751D6C10C80009E631 /* ip-address.c in Sources */,
@@ -2719,6 +2796,7 @@
 		};
 		09F68A9C1D6C031E0009E631 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DDB879414AEEA210B5C47B0 /* Pods-shadowsocksR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -2754,6 +2832,7 @@
 		};
 		09F68A9D1D6C031E0009E631 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8630A7FEAED6D9CC82970732 /* Pods-shadowsocksR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

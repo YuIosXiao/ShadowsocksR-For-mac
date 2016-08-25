@@ -7,12 +7,16 @@
 //
 
 import Foundation
+import GCDWebServer
+
 
 class ServiceHandler:NSObject{
     static let instance:ServiceHandler = ServiceHandler()
 
     let proxyMgr = ProxyManager.sharedManager()
     var ss_exit_lock:NSCondition = NSCondition()
+    let webServer = GCDWebServer()
+
 
     func start_ss(){
         NSThread.detachNewThreadSelector(#selector(ServiceHandler.ss_run_on_therad), toTarget: self, withObject: nil)
@@ -30,7 +34,7 @@ class ServiceHandler:NSObject{
     }
 
     func ss_run_on_therad(){
-        print("start")
+        NSLog("start shadowsock on thread \(NSThread.currentThread().description)")
         ss_exit_lock.lock()
 
         proxyMgr.startShadowsocks { (port, error) in
@@ -43,8 +47,42 @@ class ServiceHandler:NSObject{
             print(port)
             self.ss_exit_lock.wait()
             self.ss_exit_lock.unlock()
+            NSLog("stop shadowsock on thread \(NSThread.currentThread().description)")
             NSThread.exit()
         }
+    }
+
+    func start_pac_server(forceReloadPac:Bool=false){
+        stop_pac_server()
+
+        let pacData:NSData!
+        if let x = PacMgr.shared.sync_pac(forceReloadPac){
+            pacData = x.copy() as! NSData
+        }else{
+            let file = PacMgr.shared.PACFilePath
+            pacData = NSData(contentsOfFile: file)
+        }
+        
+        GCDWebServer.setLogLevel(4)
+
+        webServer.addHandlerForMethod("GET",path: "/pac", requestClass: GCDWebServerRequest.self, processBlock: {request in
+            return GCDWebServerDataResponse(data: pacData, contentType: "application/x-ns-proxy-autoconfig")
+        })
+        do {
+            try webServer.runWithOptions(["BindToLocalhost":true,"Port":1091])
+            NSLog("pac Http Server Started")
+        }catch{
+            NSLog("Start pac Http Server Fail")
+        }
+    }
+
+    func stop_pac_server(){
+        NSLog("pac Http Server is not running!")
+        if webServer.running{
+            NSLog("pac Http Server Stopped")
+            webServer.stop()
+        }
+
     }
 
 }

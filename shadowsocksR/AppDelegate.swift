@@ -42,6 +42,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.menu = mainMenu
         //检测proxy_conf_helper
         ProxyConfHelper.install()
+        ServiceHandler.instance.start_pac_server()
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {

@@ -4,3 +4,6 @@
 #import "ProxyManager.h"
 #import "LaunchAtLoginController.h"
 #import "ProxyConfHelper.h"
+
+#import <GCDWebServer/GCDWebServer.h>
+#import <GCDWebServer/GCDWebServerDataResponse.h>
