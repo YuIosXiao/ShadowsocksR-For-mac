@@ -40,9 +40,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         image?.template = true
         statusItem.image = image
         statusItem.menu = mainMenu
+
+        //更新菜单状态
+        updateMainMenu()
+        updateServersMenu()
+        updateRunningModeMenu()
+        updateLaunchAtLoginMenu()
+
         //检测proxy_conf_helper
         ProxyConfHelper.install()
-        ServiceHandler.instance.start_pac_server()
+
+        //启动ss
+        ServiceHandler.instance.sync_ss()
+
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -80,6 +90,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         ctrl.window?.makeKeyAndOrderFront(self)
     }
 
+    @IBAction func selectGFWListMode(sender: NSMenuItem) {
+        inf.shared.ProxyMode = .Gfwlist
+        updateRunningModeMenu()
+    }
+
+    @IBAction func selectGlobalMode(sender: NSMenuItem) {
+        inf.shared.ProxyMode = .Global
+        updateRunningModeMenu()
+    }
+
+    @IBAction func selectManualMode(sender: NSMenuItem) {
+        inf.shared.ProxyMode = .Manual
+        updateRunningModeMenu()
+    }
 
 
     func updateLaunchAtLoginMenu() {

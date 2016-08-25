@@ -25,6 +25,9 @@
 //- (void)onHttpProxyCallback: (int)fd;
 - (void)onShadowsocksCallback:(int)fd;
 @end
+
+NSTimer *live_timer;
+
 /*
 void http_proxy_handler(int fd, void *udata) {
     ProxyManager *provider = (__bridge ProxyManager *)udata;
@@ -81,7 +84,11 @@ int sock_port (int fd) {
     NSString *protocol = profile.protocols;
     NSString *obfs = profile.obfs;
     NSString *obfs_param = profile.obfspara;
+    NSNumber *listen_port = [NSNumber numberWithInteger:[[NSUserDefaults standardUserDefaults]integerForKey:@"LocalSocks5.ListenPort"] ];
+
     BOOL ota = NO;
+
+
 
     if (host && port && password && authscheme) {
         profile_t profile;
@@ -91,7 +98,8 @@ int sock_port (int fd) {
         profile.password = strdup([password UTF8String]);
         profile.method = strdup([authscheme UTF8String]);
         profile.local_addr = "127.0.0.1";
-        profile.local_port = 0;
+        profile.local_port = [listen_port intValue];
+
         profile.timeout = 600;
         profile.auth = ota;
         if (protocol.length > 0) {
@@ -104,6 +112,7 @@ int sock_port (int fd) {
             profile.obfs_param = strdup([obfs_param UTF8String]);
         }
         start_ss_local_server(profile, shadowsocks_handler, (__bridge void *)self);
+
     }else {
         if (self.shadowsocksCompletion) {
             self.shadowsocksCompletion(0, nil);

@@ -16,7 +16,7 @@
             <connections>
                 <outlet property="autoModeMenuItem" destination="iQc-Sr-ZE8" id="ggi-Or-zbZ"/>
                 <outlet property="bypasschinaModeMenuItem" destination="4D4-Xw-Jvb" id="Q16-CL-1KO"/>
-                <outlet property="globalModeMenuItem" destination="j0j-lf-MXQ" id="nOQ-At-Gso"/>
+                <outlet property="globalModeMenuItem" destination="mmz-ag-Ju7" id="Y2p-7g-FVx"/>
                 <outlet property="lanchAtLoginMenuItem" destination="vDV-7q-MYY" id="ENZ-eh-N6V"/>
                 <outlet property="mainMenu" destination="Ql4-XF-end" id="X0a-aD-Rxh"/>
                 <outlet property="manualModeMenuItem" destination="j0j-lf-MXQ" id="ub1-6v-6rQ"/>
@@ -48,15 +48,24 @@
                         <items>
                             <menuItem title="GFW List " id="iQc-Sr-ZE8">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="selectGFWListMode:" target="Voe-Tx-rLC" id="aQQ-fg-XEb"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Global Mode" id="mmz-ag-Ju7">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="selectGlobalMode:" target="Voe-Tx-rLC" id="IMD-hC-dCf"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="ByPassChina" id="4D4-Xw-Jvb">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                             </menuItem>
                             <menuItem title="Manual Mode" id="j0j-lf-MXQ">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="selectManualMode:" target="Voe-Tx-rLC" id="shB-ie-BK7"/>
+                                </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="Tda-Wq-eP1"/>
                             <menuItem title="Update PAC from GFW List" id="3aW-lf-hBo">
@@ -106,7 +115,11 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="fVW-ZQ-Afp"/>
-                <menuItem title="Quit" keyEquivalent="q" id="5T2-Da-IfJ"/>
+                <menuItem title="Quit" keyEquivalent="q" id="5T2-Da-IfJ">
+                    <connections>
+                        <action selector="terminate:" target="-2" id="gEj-co-Ll9"/>
+                    </connections>
+                </menuItem>
             </items>
             <point key="canvasLocation" x="166" y="321.5"/>
         </menu>

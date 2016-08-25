@@ -25,6 +25,7 @@ class PacMgr:NSObject{
         super.init()
     }
 
+
     func sync_pac(force:Bool=false)->NSData?{
         var needGenerate = false
 

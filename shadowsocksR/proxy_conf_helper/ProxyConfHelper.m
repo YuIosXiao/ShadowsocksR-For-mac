@@ -114,9 +114,8 @@
 }
 
 + (void)enablePACProxy {
-    NSUInteger port = [[NSUserDefaults standardUserDefaults]integerForKey:@"HttpServer.ListenPort"];    NSString* urlString = [NSString stringWithFormat:@"http://127.0.0.1:%d/pac", port];
-    NSURL* url = [NSURL fileURLWithPath:urlString];
-    NSMutableArray* args = [@[@"--mode", @"auto", @"--pac-url", [url absoluteString]]mutableCopy];
+    NSUInteger port = [[NSUserDefaults standardUserDefaults]integerForKey:@"HttpServer.ListenPort"];    NSString* urlString = [NSString stringWithFormat:@"http://127.0.0.1:%lu/pac", (unsigned long)port];
+    NSMutableArray* args = [@[@"--mode", @"auto", @"--pac-url", urlString]mutableCopy];
 //    [self addArguments4ManualSpecifyNetworkServices:args];
     [self callHelper:args];
 }
